@@ -1,0 +1,370 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - VITAMINATE</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="popper.js"></script>
+  <script src="bootstrap.js"></script>
+
+
+  <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="mileniumecommerse.css">
+
+  <style>
+  /* Mostar navegacion cuando se despliega el nav */
+  .focus {
+    /*display: none;*/
+    position: relative;
+    z-index: 100 !important;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    /* margin: 0px 20px 20px 20px; /* modificar */
+  }
+  /* unir nabvar con menu desplegado */
+  .dropnav {
+    position: absolute;
+    width: 95%;
+    left: 35;
+  }
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid" id="wrap">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm bg-light navbar-light" id="navbarResponsive">
+        <div class="container">
+          <div class="row">
+            <!-- Brand/logo -->
+            <div class="clearfix">
+              <a class="navbar-brand" maxwidth="120" height="60" href="/">
+              </a>
+            </div>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <ul class="collapse navbar-collapse nav" id="collapsibleNavbar">
+              <li class="nav-item">
+                <a href="/User/Logout" class="nav-link menupeq">
+                  <i class="material-icons icon-menu" style="color:#b3b3b3;padding-top:5px;">person</i> LogOut
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/home/VerCarrito" class="nav-link menupeq">
+                  <i class="material-icons icon-menu" style="color:#b3b3b3;padding-top:5px;">shopping_cart</i><span style="color:black" class="badge">5</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown show">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-expanded="true">
+                  Mis Datos
+                </a>
+                <div class="dropdown-menu show">
+                  <a class="dropdown-item" href="/Home/VerPedido">Pedidos</a>
+                  <a class="dropdown-item" href="/Home/RegistroCliente">Datos Cliente</a>
+                  <a class="dropdown-item" href="/Home/ListadeDirecciones">Direcciones</a>
+                  <a class="dropdown-item" href="/Home/AdicionaTCredito">Tarjetas de Credito</a>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a>
+                </a><a class="nav-link menupeq" href="/Home/Contact/2">Fcia.La Vida 16 (Soyapango 3)</a>
+
+              </li>
+            </ul>
+
+            <div class="form-inline">
+              <input class="form-control" type="text" placeholder="Buscar..." id="inputsearch" name="searchString">
+              <div class="input-group-append">
+                <a href="#" class="btn btn-danger" role="button" onclick="location.href = '/Home/Index?searchString=' + document.getElementById('inputsearch').value; return false;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="M21 21l-4.35-4.35"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mx-auto">
+            <div class="d-flex justify-content-center dropnav" id="navegacion">
+              <div class="font-weight-bold">
+                <a style="font-size:smaller;" href="#" class="nav-link menugr" rel="VITAMINAS-widget">VITAMINAS</a>
+              </div>
+              <div class="font-weight-bold">
+                <a style="font-size:smaller;" href="#" class="nav-link menugr" rel="PROMOCIONES-widget">PROMOCIONES</a>
+              </div>
+              <div class="font-weight-bold">
+                <a style="font-size:smaller;" href="#" class="nav-link menugr" rel="SUPLEMENTOS-NUTRICIONALES-widget">SUPLEMENTOS NUTRICIONALES</a>
+              </div>
+              <div class="font-weight-bold">
+                <a style="font-size:smaller;" href="#" class="nav-link menugr" rel="SUPLEMENTOS-NATURALES-widget">SUPLEMENTOS NATURALES</a>
+              </div>
+              <div class="font-weight-bold">
+                <a style="font-size:smaller;" href="#" class="nav-link menugr" rel="SUPLEMENTOS-DEPORTIVOS-widget">SUPLEMENTOS DEPORTIVOS</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </nav>
+
+    </div>
+
+
+
+    <div id="VITAMINAS-widget" class="widget-container" style="display: none;">
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $1" style="padding:0px;">ANTI ESTRES</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $11" style="padding:0px;">ADULTOMAYOR</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $12" style="padding:0px;">ANTI-ANEMICOS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $14" style="padding:0px;">OXIGENADOR Y ENERGIZANTE</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $18" style="padding:0px;">HUESOS Y MUSCULOS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $19" style="padding:0px;">DEFENSAS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $2" style="padding:0px;">MULTIVITAMINAS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $20" style="padding:0px;">SALUD INFANTIL</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=1         $22" style="padding:0px;">SALUD MUJER</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="PROMOCIONES-widget" class="widget-container" style="display: none;">
+      <div class="item-menu">
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=7         $12" style="padding:0px;">ANTI-ANEMICOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="SUPLEMENTOS-NUTRICIONALES-widget" class="widget-container" style="display: none;">
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=4         $13" style="padding:0px;">NUTRICIONAL</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=4         $21" style="padding:0px;">SUPLEMENTOS ALIMENTICIOS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=4         $22" style="padding:0px;">SALUD MUJER</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=4         $7" style="padding:0px;">NUTRICION DEPORTIVA</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=4         $8" style="padding:0px;">ARTICULACIONES</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="SUPLEMENTOS-NATURALES-widget" class="widget-container" style="display: none;">
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=6         $18" style="padding:0px;">HUESOS Y MUSCULOS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=6         $19" style="padding:0px;">DEFENSAS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="SUPLEMENTOS-DEPORTIVOS-widget" class="widget-container" style="display: none;">
+      <div class="item-menu">
+
+        <br>
+        <ul>
+          <li>
+            <a href="/Home/Index?Category=5         $7" style="padding:0px;">NUTRICION DEPORTIVA</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <!-- script que permite el hover del menu -->
+
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'UA-117513645-2');
+  $(document).ready(function() {
+    var timer;
+    $('.menugr').mouseover(function() {
+      var rel = $(this).attr('rel');
+
+      timer = window.setTimeout(function() {
+        $('.overlay').show();
+        var id = rel;
+        var $currentWidget = $('#' + id);
+        $('#navbarResponsive').addClass('focus');
+        $('#navegacion').addClass('focus dropnav');
+        $currentWidget.show().siblings('.widget-container').hide();
+      }, 500);
+    }, window.clearTimeout(timer));
+
+    $('.menupeq').mouseover(function() {
+      $('.widget-container').hide();
+      $('.overlay').hide();
+      window.clearTimeout(timer)
+    });
+
+    $('#wrap').mouseleave(function() {
+      $('.widget-container').hide();
+      $('.overlay').hide();
+      $('#navbarResponsive').removeClass('focus');
+      $('#navegacion').removeClass('focus dropnav');
+      window.clearTimeout(timer)
+    });
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+      if (!$(this).next().hasClass('show')) {
+        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+      }
+      var $subMenu = $(this).next(".dropdown-menu");
+      $subMenu.toggleClass('show');
+
+      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+        $('.dropdown-submenu .show').removeClass("show");
+      });
+
+      return false;
+    });
+  });
+
+  </script>
+
+
+</body>
+
+</html>

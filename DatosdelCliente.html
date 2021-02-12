@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand ml-5" href="#"><img src="img/logo1.png" alt="" width="100"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="https://GerardoAlfonso.github.io/login">
+              <i class="fas fa-user"></i> Login
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user"></i> Cerrar la sesión
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i> <span>2</span>
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mis datos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://www.gerardoalfonso.github.io/pedidos">Pedidos</a>
+              <a class="dropdown-item" href="https://www.gerardoalfonso.github.io/detallesdelcliente">Datos cliente</a>
+              <a class="dropdown-item" href="http://GerardoAlfonso.github.io/listadeDirecciones">Direcciones</a>
+              <a class="dropdown-item" href="#">Tarjetas de credito</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Seleccione una sucursal</a>
+          </li>
+
+        </ul>
+
+
+
+        <form class="form-inline my-2 my-lg-0 mr-5 ">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-md btn-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+  </header>
+  <!-- Contenido -->
+  <div class="container-fluid">
+
+    <div class="container w-100 py-5">
+      <div class="row">
+        <div class="col-xl-12 col-md-11">
+          <h3 class="pt-5 pt-lg-3 pb-3 text-center">Datos de Cliente o Empresa</h3>
+          <form action="/Home/RegistroCliente" method="post">
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <p>
+                  <label for="nombrecom">Nombre Completo:</label>
+                  <input Value="" class="form-control" data-val="true" data-val-maxlength="Escriba un maximo de 80 Caracteres" data-val-maxlength-max="80"
+                    data-val-minlength="Escriba un minimo de 2 Caracteres" data-val-minlength-min="2" data-val-required="El campo Nombre no puede estar vacio" id="nombrecom" name="nombrecom" type="text" value="" />
+                  <span class="field-validation-valid" data-valmsg-for="nombrecom" data-valmsg-replace="true"></span>
+                </p>
+                <p>
+                  <label for="tdocumento">Tipo de Documento</label>
+                  <select Value="1" class="form-control" data-val="true" data-val-number="The field Tipo de Documento must be a number." data-val-required="El campo Nombre no puede estar vacio" id="tdocumento" name="tdocumento">
+                    <option selected="selected" value="1">DUI </option>
+                    <option value="2">PASAPORTE </option>
+                    <option value="3">CARNET RESIDENTE </option>
+                    <option value="4">OTRO </option>
+                  </select>
+                  <span class="field-validation-valid" data-valmsg-for="tdocumento" data-valmsg-replace="true"></span>
+                </p>
+                <p>
+                  <label for="numerod">Numero Documento</label>
+                  <input Value="" class="form-control" data-val="true" data-val-maxlength="The field Numero Documento must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20"
+                    data-val-minlength="The field Numero Documento must be a string or array type with a minimum length of &#39;1&#39;." data-val-minlength-min="1" data-val-required="Debe de Ingresar Numero de Documento" id="numerod" name="numerod"
+                    type="text" value="" />
+                  <span class="field-validation-valid" data-valmsg-for="numerod" data-valmsg-replace="true"></span>
+                </p>
+                <p>
+                  <label for="direccion">Direccion</label>
+                  <input
+                    Value=""
+                    class="form-control" data-val="true" data-val-maxlength="The field Direccion must be a string or array type with a maximum length of &#39;240&#39;." data-val-maxlength-max="240"
+                    data-val-minlength="The field Direccion must be a string or array type with a minimum length of &#39;10&#39;." data-val-minlength-min="10" data-val-required="Debe registrar una direccion" id="direccion" name="direccion"
+                    type="text" value="" />
+                  <span class="field-validation-valid" data-valmsg-for="direccion" data-valmsg-replace="true"></span>
+                </p>
+                <p>
+                  <label for="iddepto">Departamento</label>
+                  <select Value="01" class="form-control" data-val="true" data-val-required="Debe Seleccionar el Departamento" id="iddepto" name="iddepto">
+                    <option selected="selected" value="01">San Salvador</option>
+                    <option value="02">Santa Ana</option>
+                    <option value="03">San Miguel</option>
+                    <option value="04">La Libertad</option>
+                    <option value="05">Usulut&#225;n</option>
+                    <option value="06">Sonsonate</option>
+                    <option value="07">La Uni&#243;n</option>
+                    <option value="08">La Paz</option>
+                    <option value="09">Chalatenango</option>
+                    <option value="10">Cuscatl&#225;n</option>
+                    <option value="11">Ahuachap&#225;n</option>
+                    <option value="12">Moraz&#225;n</option>
+                    <option value="13">San Vicente</option>
+                    <option value="14">Caba&#241;as</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="idmunicipio">Ciudad</label>
+                  <select Value="0112" class="form-control" data-val="true" data-val-required="Debe seleccionar la Ciudad" id="idmunicipio" name="idmunicipio">
+                    <option value="0603">Acajutla</option>
+                    <option value="0910">Agua Caliente</option>
+                    <option selected="selected" value="0112">Aguilares</option>
+                    <option value="1101">Ahuachap&#225;n</option>
+                    <option value="0512">Alegr&#237;a</option>
+                    <option value="0705">Anamor&#243;s</option>
+                    <option value="0407">Antiguo Cuscatl&#225;n</option>
+                    <option value="1108">Apaneca</option>
+                    <option value="1304">Apastepeque</option>
+                    <option value="0109">Apopa</option>
+                    <option value="1216">Arambala</option>
+                    <option value="0906">Arcatao</option>
+                    <option value="0604">Armenia</option>
+                    <option value="1102">Atiquizaya</option>
+                    <option value="0118">Ayutuxtepeque</option>
+                    <option value="0932">Azacualpa</option>
+                    <option value="0503">Berl&#237;n</option>
+                    <option value="0713">Bol&#237;var</option>
+                    <option value="1205">Cacaopera</option>
+                    <option value="0523">California</option>
+                    <option value="0613">Caluco</option>
+                    <option value="0928">Cancasque</option>
+                    <option value="1007">Candelaria</option>
+                    <option value="0207">Candelaria de la Frontera</option>
+                    <option value="0313">Carolina</option>
+                    <option value="0901">Chalatenango</option>
+                    <option value="0202">Chalchuapa</option>
+                    <option value="0311">Chapeltique</option>
+                    <option value="1210">Chilanga</option>
+                    <option value="0414">Chiltiup&#225;n</option>
+                    <option value="0302">Chinameca</option>
+                    <option value="0305">Chirilagua</option>
+                    <option value="1408">Cinquera</option>
+                    <option value="0909">Cital&#225;</option>
+                    <option value="0403">Ciudad Arce</option>
+                    <option value="0304">Ciudad Barrios</option>
+                    <option value="0204">Coatepeque</option>
+                    <option value="1001">Cojutepeque</option>
+                    <option value="0405">Col&#243;n</option>
+                    <option value="0319">Comacar&#225;n</option>
+                    <option value="0914">Comalapa</option>
+                    <option value="0408">Comasagua</option>
+                    <option value="0513">Concepci&#243;n Batres</option>
+                    <option value="1105">Concepci&#243;n de Ataco</option>
+                    <option value="0714">Concepci&#243;n de Oriente</option>
+                    <option value="0911">Concepci&#243;n Quezaltepeque</option>
+                    <option value="0707">Conchagua</option>
+                    <option value="1203">Corinto</option>
+                    <option value="0611">Cuisnahuat</option>
+                    <option value="0105">Cuscatancingo</option>
+                    <option value="0817">Cuyultit&#225;n</option>
+                    <option value="0102">Delgado</option>
+                    <option value="1214">Delicias de Concepci&#243;n</option>
+                    <option value="1407">Dolores</option>
+                    <option value="0908">Dulce Nombre de Mar&#237;a</option>
+                    <option value="1008">El Carmen</option>
+                    <option value="0706">El Carmen</option>
+                    <option value="0930">El Carrizal</option>
+                    <option value="0205">El Congo</option>
+                    <option value="1207">El Divisadero</option>
+                    <option value="0116">El Paisnal</option>
+                    <option value="0925">El Paraiso</option>
+                    <option value="0211">El Porvenir</option>
+                    <option value="1112">El Refugio</option>
+                    <option value="1221">El Rosario</option>
+                    <option value="1014">El Rosario</option>
+                    <option value="0809">El Rosario</option>
+                    <option value="0708">El Sauce</option>
+                    <option value="0303">El Tr&#225;nsito</option>
+                    <option value="0521">El Triunfo</option>
+                    <option value="0518">Ereguayqu&#237;n</option>
+                    <option value="0510">Estanzuelas</option>
+                    <option value="1409">Guacotecti</option>
+                    <option value="1310">Guadalupe</option>
+                    <option value="1224">Gualococti</option>
+                    <option value="1206">Guatajiagua</option>
+                    <option value="1107">Guaymango</option>
+                    <option value="0117">Guazapa</option>
+                    <option value="0411">Huiz&#250;car</option>
+                    <option value="1402">Ilobasco</option>
+                    <option value="0107">Ilopango</option>
+                    <option value="0715">Intipuc&#225;</option>
+                    <option value="0614">Ishuat&#225;n</option>
+                    <option value="0602">Izalco</option>
+                    <option value="0410">Jayaque</option>
+                    <option value="0820">Jerusal&#233;n</option>
+                    <option value="0422">Jicalapa</option>
+                    <option value="0502">Jiquilisco</option>
+                    <option value="1215">Joateca</option>
+                    <option value="1208">Jocoaitique</option>
+                    <option value="1202">Jocoro</option>
+                    <option value="0606">Juay&#250;a</option>
+                    <option value="0505">Jucuapa</option>
+                    <option value="0507">Jucuar&#225;n</option>
+                    <option value="1106">Julutla</option>
+                    <option value="1405">Jutiapa</option>
+                    <option value="0922">La Laguna</option>
+                    <option value="0406">La Libertad</option>
+                    <option value="0903">La Palma</option>
+                    <option value="0905">La Reina</option>
+                    <option value="0701">La Uni&#243;n</option>
+                    <option value="0916">Las Flores</option>
+                    <option value="0913">Las Vueltas</option>
+                    <option value="0709">Lislique</option>
+                    <option value="0309">Lolotique</option>
+                    <option value="1217">Lolotiquillo</option>
+                    <option value="0811">Mar&#237;a Ostuma</option>
+                    <option value="0212">Masahuat</option>
+                    <option value="1211">Meanguera</option>
+                    <option value="0718">Meanguera del Golfo</option>
+                    <option value="0103">Mejicanos</option>
+                    <option value="0821">Mercedes La Ceiba</option>
+                    <option value="0511">Mercedes Uma&#241;a</option>
+                    <option value="0203">Metap&#225;n</option>
+                    <option value="0308">Moncagua</option>
+                    <option value="1009">Monte San Juan</option>
+                    <option value="0610">Nahuilingo</option>
+                    <option value="0605">Nahuizalco</option>
+                    <option value="0108">Nejapa</option>
+                    <option value="0918">Nombre de Jes&#250;s</option>
+                    <option value="0902">Nueva Concepci&#243;n</option>
+                    <option value="0711">Nueva Esparta</option>
+                    <option value="0520">Nueva Granada</option>
+                    <option value="0317">Nueva Guadalupe</option>
+                    <option value="0401">Nueva San Salvador</option>
+                    <option value="0912">Nueva Trinidad</option>
+                    <option value="0415">Nuevo Cuscatl&#225;n</option>
+                    <option value="0316">Nuevo Ed&#233;n de San Juan</option>
+                    <option value="0917">Ojos de Agua</option>
+                    <option value="0805">Olocuilta</option>
+                    <option value="1015">Oratorio de Concepci&#243;n</option>
+                    <option value="1209">Osicala</option>
+                    <option value="0509">Ozatl&#225;n</option>
+                    <option value="0111">Panchimalco</option>
+                    <option value="0818">Paraiso de Osorio</option>
+                    <option value="0703">Pasaquina</option>
+                    <option value="1222">Perqu&#237;n</option>
+                    <option value="0712">Polor&#243;s</option>
+                    <option value="0919">Potonico</option>
+                    <option value="0515">Puerto el Triunfo</option>
+                    <option value="0314">Quelepa</option>
+                    <option value="0402">Quezaltepeque</option>
+                    <option value="0119">Rosario de Mora</option>
+                    <option value="0417">Sacacoyo</option>
+                    <option value="0615">Salcoatit&#225;n</option>
+                    <option value="0508">San Agust&#237;n</option>
+                    <option value="0704">San Alejo</option>
+                    <option value="0320">San Antonio</option>
+                    <option value="0924">San Antonio de la Cruz</option>
+                    <option value="0609">San Antonio del Monte</option>
+                    <option value="0929">San Antonio Los Ranchos</option>
+                    <option value="0813">San Antonio Masahuat</option>
+                    <option value="0213">San Antonio Pajonal</option>
+                    <option value="1012">San Bartolom&#233; Perulap&#237;a</option>
+                    <option value="0522">San Buenaventura</option>
+                    <option value="1220">San Carlos</option>
+                    <option value="1312">San Cayetano Istepeque</option>
+                    <option value="1010">San Crist&#243;bal</option>
+                    <option value="0517">San Dionisio</option>
+                    <option value="0819">San Emigdio</option>
+                    <option value="1305">San Esteban Catarina</option>
+                    <option value="1225">San Fernando</option>
+                    <option value="0931">San Fernando</option>
+                    <option value="1201">San Francisco</option>
+                    <option value="0807">San Francisco Chinameca</option>
+                    <option value="0514">San Francisco Javier</option>
+                    <option value="0933">San Francisco Lempa</option>
+                    <option value="1103">San Francisco Men&#233;ndez</option>
+                    <option value="0920">San Francisco Moraz&#225;n</option>
+                    <option value="0312">San Gerardo</option>
+                    <option value="0907">San Ignacio</option>
+                    <option value="1306">San Ildefonso</option>
+                    <option value="1226">San Isidro</option>
+                    <option value="1404">San Isidro</option>
+                    <option value="0923">San Isidro Labrador</option>
+                    <option value="0310">San Jorge</option>
+                    <option value="0716">San Jos&#233;</option>
+                    <option value="1004">San Jos&#233; Guayabal</option>
+                    <option value="0418">San Jos&#233; Villanueva</option>
+                    <option value="0803">San Juan Nonualco</option>
+                    <option value="0404">San Juan Opico</option>
+                    <option value="0808">San Juan Talpa</option>
+                    <option value="0815">San Juan Tepezones</option>
+                    <option value="0607">San Juli&#225;n</option>
+                    <option value="1308">San Lorenzo</option>
+                    <option value="1110">San Lorenzo</option>
+                    <option value="0812">San Luis</option>
+                    <option value="0315">San Luis de la Reina</option>
+                    <option value="0927">San Luis del Carmen</option>
+                    <option value="0822">San Luis La Herradura</option>
+                    <option value="0106">San Marcos</option>
+                    <option value="0110">San Mart&#237;n</option>
+                    <option value="0421">San Mat&#237;as</option>
+                    <option value="0301">San Miguel</option>
+                    <option value="0926">San Miguel de Mercedes</option>
+                    <option value="0814">San Miguel Tepezontes</option>
+                    <option value="0409">San Pablo Tacachico</option>
+                    <option value="0804">San Pedro Masahuat</option>
+                    <option value="0806">San Pedro Nonualco</option>
+                    <option value="1003">San Pedro Perulap&#225;n</option>
+                    <option value="1109">San Pedro Puxtla</option>
+                    <option value="0810">San Rafael</option>
+                    <option value="0915">San Rafael</option>
+                    <option value="1006">San Rafael Arc&#225;ngel</option>
+                    <option value="0307">San Rafael Oriente</option>
+                    <option value="1013">San Ram&#243;n</option>
+                    <option value="0101">San Salvador</option>
+                    <option value="1303">San Sebasti&#225;n</option>
+                    <option value="0208">San Sebasti&#225;n Salitrillo</option>
+                    <option value="1213">San Sim&#243;n</option>
+                    <option value="1301">San Vicente</option>
+                    <option value="0201">Santa Ana</option>
+                    <option value="0612">Santa Catarina Masahuat</option>
+                    <option value="1307">Santa Clara</option>
+                    <option value="1016">Santa Cruz Analquito</option>
+                    <option value="1011">Santa Cruz Michapa</option>
+                    <option value="0506">Santa Elena</option>
+                    <option value="0519">Santa Mar&#237;a</option>
+                    <option value="0921">Santa Rita</option>
+                    <option value="0702">Santa Rosa de Lima</option>
+                    <option value="0209">Santa Rosa Guachipil&#237;n</option>
+                    <option value="0210">Santiago de la Frontera</option>
+                    <option value="0504">Santiago de Mar&#237;a</option>
+                    <option value="0802">Santiago Nonualco</option>
+                    <option value="0115">Santiago Texacuangos</option>
+                    <option value="0616">Santo Domingo</option>
+                    <option value="1311">Santo Domingo</option>
+                    <option value="0114">Santo Tom&#225;s</option>
+                    <option value="1223">Sensembra</option>
+                    <option value="1401">Sensuntepeque</option>
+                    <option value="0306">Sesori</option>
+                    <option value="1204">Sociedad</option>
+                    <option value="0601">Sonsonate</option>
+                    <option value="0608">Sonzacate</option>
+                    <option value="0104">Soyapango</option>
+                    <option value="1002">Suchitoto</option>
+                    <option value="1104">Tacuba</option>
+                    <option value="0420">Talnique</option>
+                    <option value="0416">Tamanique</option>
+                    <option value="0816">Tapalhuaca</option>
+                    <option value="0516">Tecap&#225;n</option>
+                    <option value="1302">Tecoluca</option>
+                    <option value="1406">Tejutepeque</option>
+                    <option value="0904">Tejutla</option>
+                    <option value="1005">Tenancingo</option>
+                    <option value="0413">Teotepeque</option>
+                    <option value="0412">Tepecoyo</option>
+                    <option value="1313">Tepetit&#225;n</option>
+                    <option value="0206">Texistepeque</option>
+                    <option value="0113">Tonacatepeque</option>
+                    <option value="1212">Torola</option>
+                    <option value="1111">Tur&#237;n</option>
+                    <option value="0318">Uluazapa</option>
+                    <option value="0501">Usulut&#225;n</option>
+                    <option value="1309">Verapaz</option>
+                    <option value="1403">Victoria</option>
+                    <option value="1218">Yamabal</option>
+                    <option value="0717">Yayantique</option>
+                    <option value="1219">Yoloaiqu&#237;n</option>
+                    <option value="0710">Yucuaiqu&#237;n</option>
+                    <option value="0801">Zacatecoluca</option>
+                    <option value="0419">Zaragoza</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="nit">NIT</label>
+                  <input Value="" class="form-control" data-val="true" data-val-maxlength="The field NIT must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20"
+                    data-val-minlength="The field NIT must be a string or array type with a minimum length of &#39;10&#39;." data-val-minlength-min="10" id="nit" name="nit" type="text" value="" />
+                </p>
+                <p>
+                  <label for="telefono">Telefono</label>
+                  <input Value="" class="form-control" data-val="true" data-val-maxlength="The field Telefono must be a string or array type with a maximum length of &#39;15&#39;." data-val-maxlength-max="15"
+                    data-val-minlength="The field Telefono must be a string or array type with a minimum length of &#39;7&#39;." data-val-minlength-min="7" data-val-required="Debe ingresar numero de Telefono" id="telefono" name="telefono" type="text"
+                    value="" />
+                  <span class="field-validation-valid" data-valmsg-for="telefono" data-valmsg-replace="true"></span>
+                </p>
+                <p>
+                  <label for="sexo">Genero</label>
+                  <select Value="2" class="form-control" data-val="true" data-val-number="The field Genero must be a number." data-val-required="The Genero field is required." id="sexo" name="sexo">
+                    <option value="1">FEMENINO </option>
+                    <option selected="selected" value="2">MASCULINO </option>
+                  </select>
+                </p>
+              </div>
+              <div class="col-md-5">
+                <p>
+                  <label for="registro">Registro Empresa</label>
+                  <input Value="" class="form-control" data-val="true" data-val-maxlength="The field Registro Empresa must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20"
+                    data-val-minlength="The field Registro Empresa must be a string or array type with a minimum length of &#39;1&#39;." data-val-minlength-min="1" id="registro" name="registro" type="text" value="" />
+                </p>
+
+                <p>
+                  <label for="nombreleg">Nombre Empresa</label>
+                  <input
+                    Value="                                                                                                                                                                                                                                                "
+                    class="form-control" data-val="true" data-val-maxlength="The field Nombre Empresa must be a string or array type with a maximum length of &#39;240&#39;." data-val-maxlength-max="240"
+                    data-val-minlength="The field Nombre Empresa must be a string or array type with a minimum length of &#39;1&#39;." data-val-minlength-min="1" id="nombreleg" name="nombreleg" type="text" value="" />
+                </p>
+
+                <p>
+                  <label for="giro">Giro Comercial</label>
+                  <input
+                    Value="                                                                                                                                                                                                                                                "
+                    class="form-control" data-val="true" data-val-maxlength="The field Giro Comercial must be a string or array type with a maximum length of &#39;240&#39;." data-val-maxlength-max="240"
+                    data-val-minlength="The field Giro Comercial must be a string or array type with a minimum length of &#39;1&#39;." data-val-minlength-min="1" id="giro" name="giro" type="text" value="" />
+
+                </p>
+
+                <p>
+                  <label for="nitpro">NIT de Empresa</label>
+                  <input Value="                    " class="form-control" data-val="true" data-val-maxlength="The field NIT de Empresa must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20"
+                    data-val-minlength="The field NIT de Empresa must be a string or array type with a minimum length of &#39;10&#39;." data-val-minlength-min="10" id="nitpro" name="nitpro" type="text" value="" />
+                </p>
+
+                <p>
+                  <button type="submit" class="btn btn-outline-success btn-block">Guardar Registro</button>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="container-fluid " style="background-color: #34383d">
+    <div class="mt-5 text-white">
+
+      <footer class="footer pt-5 pb-5">
+
+        <div class="row justify-content-center ">
+          <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+            <p style="font-size: x-large">Hecho por</p>
+            <p class="text-secondary">EscrichSoft</p>
+            <p class="text-secondary">S.A DE C.V.</p>
+            <p class="text-secondary">© 2021</p>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+            <p style="font-size: x-large">VITAMINATE</p>
+            <p class="text-secondary">Contáctenos</p>
+            <p class="text-secondary">Orden de compra</p>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+            <p style="font-size: x-large">Nosotros</p>
+            <p class="text-secondary"></p>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+            <p style="font-size: x-large">Correo</p>
+            <p class="text-secondary">ventas@farmacialavida.com</p>
+
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+            <p style="font-size: x-large">Redes Sociales</p>
+            <a href=""><img src="img/facebook-logo.png" width="25px" alt=""></a>
+            <a href=""><img src="img/twitter-logo.png" width="30px" alt=""></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
