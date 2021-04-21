@@ -1,0 +1,221 @@
+/* Created by EscrichSoft S.A DE C.V*/
+/* 08/04/2021 */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* catalogo de productos*/
+.productos a{
+  color: black;
+}
+.productos .box{
+  margin: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.search input{
+  width: 100%;
+  border: none;
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.offer
+{
+  position: absolute;
+  width: 20%;
+  height: 11%;
+  background: red;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 50%;
+}
+.offer p{
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+/* Calificaciones */
+input[type = "radio"]{ display:none;/*position: absolute;top: -1000em;*/}
+label{ color:grey;}
+
+.clasificacion{
+direction: rtl;
+unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label{color:orange;}
+input[type = "radio"]:checked ~ label{color:orange;}
+
+/* Resultados de busqueda */
+.busqueda
+{
+  margin-top: 20%;
+}
+.resultados-busqueda
+{
+  position: absolute;
+  height: auto;
+  width: 92%;
+  display: none;
+  z-index: 98;
+  border-radius: 3px;
+  padding-left: 16px;
+  -webkit-box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.3);
+}
+.keyup{
+  display: block;
+}
+
+/* ONLOAD FRAMES */
+.loading{
+  width: 100%;
+  position: relative;
+  transition: all 1s ease;
+  display: block;
+}
+.loading::before
+{
+  content: "";
+  z-index: 98 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background: #DDD;
+  animation: load 2s linear !important;
+  animation-iteration-count: infinite !important;
+}
+@keyframes load {
+  0% {background-color: #DDD}
+  50% {background-color: #9d9d9d}
+  100% {background-color: #DDD}
+}
+
+/* ANIMACION DE CARGA */
+.circle {
+  display: inline-block;
+  margin: 5em;
+  border-width: 30px;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+.style-1 {
+border-style: solid;
+border-color: #444 transparent;
+}
+
+@-webkit-keyframes spin {
+100% { -webkit-transform: rotate(359deg); }
+}
+
+@-moz-keyframes spin {
+100% { -moz-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+100% {  transform: rotate(359deg); }
+}
+
+
+/*
+* RESPONSIVE
+*/
+@media screen and (max-width: 991px)
+{
+  .carousel{
+    margin-top: 13.4%;
+  }
+  /*Barra de busqueda*/
+  .search{
+    /*margin-top: %;*/
+  }
+
+  /*   o individual*/
+  .producto
+  {
+    margin-top: 20%;
+    text-align: center;
+  }
+  .producto .imagen-grande {width: 100% !important; margin-left: auto; margin-right: auto;}
+  .producto .imagen-grande img
+  {
+    width: 90% !important; height: 50vh;
+  }
+  .producto .imagen-galeria img
+  {
+    margin-top: 5% !important;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+  }
+  .producto .imagen-galeria .img-active
+  {
+    border: 2px solid yellow;
+  }
+  .producto .detalles{
+    margin-top: 5%;
+  }
+  .offer
+  {
+    width: 30%;
+    height: 11%;
+  }
+  .offer p{
+    margin-top: 3px;
+  }
+
+  .producto .detalles .titulo
+  {
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 90%;
+  }
+  .producto .detalles .row .precio-anterior
+  {
+    margin-left: 5%;
+    width: 20%;
+    height: 23px;
+    top: 0;
+    right: 0;
+    background-image:
+    linear-gradient(
+      rgb(255,255,255),
+      rgb(255,255,255) 35%,
+      rgba(0,0,0,0.4) 35%,
+      rgba(0,0,0,0.4) 65%,
+      rgb(255,255,255) 65%
+      );
+  }
+
+}
+/* tablets IPAD 768x1024 en vertical*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  .carousel {
+    margin-top: 6.4% !important;
+  }
+
+
+
+
+
+
+}

@@ -1,0 +1,190 @@
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background: #262626;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+  justify-content: space-around;
+}
+header .logo{
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  float: right;
+  font-weight: bold;
+  text-align: right;
+}
+header nav{
+  float: right;
+}
+header nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li{
+  list-style: none;
+  position: relative;
+}
+/* Sub menu*/
+header nav ul li.sub-menu:before
+{
+  content: '\f0d7';
+  font-family: fontAwesome;
+  position: absolute;
+  line-height: 50px;
+  color: white;
+  right: 5px;
+}
+header nav ul li.active.sub-menu:before{
+  content: '\f0d8';
+
+}
+
+header nav ul li ul{
+  position: absolute;
+  left: 0;
+  background: #333;
+  display: none;
+}
+header nav ul li.active ul
+{
+  display:block;
+}
+
+header nav ul li ul li{
+  display: block;
+  width: 200px;
+
+}
+header nav ul li p,
+header nav ul li a{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #FFf;
+  text-decoration: none;
+  display: block;
+}
+header nav ul li a.active,
+header nav ul li a:hover{
+  color: #FFF;
+  background: #2196f3;
+}
+
+/* Total en el carrito */
+.total {
+  justify-content: space-between;
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+
+.menu-toggle
+{
+  color: #fff;
+  float: left;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+.botton-nav{
+  display: none !important;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  justify-content: center;
+}
+.botton-nav div p
+.botton-nav div a{
+  padding: 0;
+  margin: 0;
+}
+.botton-nav img
+{
+  /*Invertir colores de iconos*/
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  margin: 20px;
+  padding: 0;
+  margin-bottom: 0;
+}
+/*Bloquear scroll*/
+.no_scroll{
+    overflow:hidden;
+}
+
+/*
+*
+* RESPONSIVE
+*/
+@media screen and (max-width: 991px)
+{
+  .botton-nav{
+    position: absolute;
+    top: calc(85%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-flex !important;
+
+    background: #262626;
+    box-sizing: border-box;
+  }
+  header
+  {
+    padding: 0 20px;
+    position: fixed;
+  }
+  .menu-toggle
+  {
+    display: block;
+  }
+  header nav
+  {
+    position: absolute;
+    width: calc(100%);
+    /*height: calc(100% - 50px);*/
+    height: calc(93vh);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.active
+  {
+    left: 0;
+  }
+  header nav ul{
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a
+  {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  header nav ul li.active ul
+  {
+    position: relative;
+    /* color del submenu*/
+    background: #003e6f;
+  }
+  header nav ul li ul li
+  {
+    width: 100%;
+  }
+
+
+
+
+
+
+}

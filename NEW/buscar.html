@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/modal.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html"><img src="img/escrichsoft.png" alt="" class="w-50"></a></div>
+    <nav>
+      <ul>
+        <li><a href="" class="">Home</a></li>
+        <li class="sub-menu"><a href="#">Home</a>
+          <ul>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 1</a></li>
+          </ul>
+        </li>
+        <li><a href="">Dos</a></li>
+        <li class="sub-menu"><a href="#">Home</a>
+          <UL>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 1</a></li>
+          </UL>
+        </li>
+        <li><a href="">Home</a></li>
+      </ul>
+
+      <div class="botton-nav d-flex">
+        <div>
+          <img src="img/user.png" alt="" width="25" height="25">
+          <p>Mi perfil</p>
+        </div>
+        <div>
+          <a href="carrito.html" style="color: #fff;"><img src="img/shopping-cart.png" alt="" width="25" height="25"></a>
+          <p><a href="carrito.html" style="color: #fff;">Carrito</a></p>
+        </div>
+        <div>
+          <a href="buscar.html" style="color: #fff;"><img src="img/search.png" alt="" width="25" height="25"></a>
+          <p><a href="carrito.html" style="color: #fff;">Buscar</a></p>
+        </div>
+      </div>
+
+    </nav>
+    <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
+  </header>
+
+  <!-- Contenido -->
+  <section class="busqueda">
+    <div class="container mt-4">
+      <!-- Buscador -->
+      <div class="search d-flex form-control">
+        <input type="text" class="" placeholder="Buscar..." id="input-busqueda">
+        <a href="" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="resultados-busqueda form-control" id="resultados-busqueda">
+        <p id="link"></p>
+      </div>
+
+      <div class="filtros mt-5">
+        <p>Mostrando resultados para: <span class="font-weight-bold">asdf</span></p>
+        <div class="d-flex">
+          <p>ordenar por</p>
+          <select class="form-control form-control-sm w-50 ml-3">
+            <option>Nombre</option>
+            <option>Fecha</option>
+            <option>Ofertas primero</option>
+          </select>
+        </div>
+        <div class="d-flex">
+          <p>Precio</p>
+          <select class="form-control form-control-sm w-50 ml-3">
+            <option>Seleccione...</option>
+            <option>Ascendente</option>
+            <option>Descendente</option>
+          </select>
+        </div>
+
+
+      </div>
+
+      <!-- Productos relacionados-->
+      <div class="productos-relacionados mt-5">
+        <p class="h5 text-center mb-4">Sugerencias</p>
+
+        <div class="productos">
+          <div class="row mt-4 justify-content-center">
+            <!-- ITEM -->
+            <div class="col-5 col-md-4 col-lg-3 box">
+              <img src="img/search.png" alt="" class="w-100 mt-2">
+              <a href="producto.html">Producto numero 00231</a>
+              <P class="text-success text-center">$2.99</P>
+            </div>
+            <!-- ITEM -->
+            <div class="col-5 col-md-4 col-lg-3 box">
+              <div class="offer">
+                <p>-20%</p>
+              </div>
+              <img src="img/search.png" alt="" class="w-100 mt-2">
+              <a href="producto.html">Producto numero 00231</a>
+              <P class="text-success text-center">$2.99</P>
+            </div>
+            <!-- ITEM -->
+            <div class="col-5 col-md-4 col-lg-3 box">
+              <img src="img/search.png" alt="" class="w-100 mt-2">
+              <a href="producto.html">Producto numero 00231</a>
+              <P class="text-success text-center">$2.99</P>
+            </div>
+            <!-- ITEM -->
+            <div class="col-5 col-md-4 col-lg-3 box">
+              <img src="img/search.png" alt="" class="w-100 mt-2">
+              <a href="producto.html">Producto numero 00231</a>
+              <P class="text-success text-center">$2.99</P>
+            </div>
+
+          </div>
+      </div>
+
+    </div>
+  </Section>
+
+  <!-- Footer -->
+  <section>
+    <!-- Footer -->
+    <div class="container-fluid " style="background-color: #34383d">
+      <div class="mt-5 text-white">
+
+        <footer class="footer pt-5 pb-5">
+
+          <div class="row justify-content-center ">
+            <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+              <p style="font-size: x-large">Hecho por</p>
+              <p class="text-secondary">EscrichSoft</p>
+              <p class="text-secondary">S.A DE C.V.</p>
+              <p class="text-secondary">© 2021</p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+              <p style="font-size: x-large">Nombre tienda</p>
+              <p class="text-secondary">Contáctenos</p>
+              <p class="text-secondary">Orden de compra</p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+              <p style="font-size: x-large">Nosotros</p>
+              <p class="text-secondary"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+              <p style="font-size: x-large">Correo</p>
+              <p class="text-secondary">ventas@tiendasfavoritas.com</p>
+
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-2 text-center">
+              <p style="font-size: x-large">Redes Sociales</p>
+              <a href=""><img src="img/facebook-logo.png" width="25px" alt=""></a>
+              <a href=""><img src="img/twitter-logo.png" width="30px" alt=""></a>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/modal.js" charset="utf-8"></script>
+  <script src="js/loading.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.menu-toggle').click(function() {
+        $('nav').toggleClass('active')
+        $("body").siblings().removeClass("no_scroll");
+        $("body").toggleClass("no_scroll");
+      })
+      $('ul li').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).toggleClass('active');
+      })
+    })
+  </script>
+
+</body>
+</html>
